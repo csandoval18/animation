@@ -9,10 +9,17 @@
 		<div class="animation-container">
 			<div class="box"></div>
 		</div>
+		<div class="btn-options">
+			<button class="btn-primary">next</button>
+		</div>
 	</div>
 </template>
 
 <style scoped>
+.app-container {
+	display: flex;
+	flex-direction: column;
+}
 .title {
 	display: flex;
 	align-items: center;
@@ -23,27 +30,38 @@
 	color: white;
 	padding-bottom: 4rem;
 }
-
 .animation-container {
 	display: flex;
 	padding-left: 38%;
+	height: 600px;
 }
-
 .box {
 	width: 100px;
 	height: 100px;
 	background-color: red;
 	position: relative;
-	animation-name: square;
+	animation: square 4s linear 2s infinite alternate-reverse backwards running;
+}
+.btn-options {
+	margin-top: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	min-height: 5rem;
+}
+.btn-primary {
+	width: 6rem;
+	height: 3rem;
+}
+/* animation-name: square;
 	animation-duration: 2s;
 	animation-timing-function: linear;
 	animation-delay: 2s;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 	animation-fill-mode: backwards;
-	animation-play-state: running;
-}
-
+	animation-play-state: running; */
 @keyframes square {
 	0% {
 		background-color: red;
