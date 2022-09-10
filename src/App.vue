@@ -21,6 +21,7 @@
 	height: 8rem;
 	font-size: 3rem;
 	color: white;
+	padding-bottom: 4rem;
 }
 
 .animation-container {
@@ -35,6 +36,12 @@
 	position: relative;
 	animation-name: square;
 	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
 }
 
 @keyframes square {
