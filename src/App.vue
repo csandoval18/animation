@@ -1,16 +1,21 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+<script lang="ts">
+export default {
+	data() {
+		return {
+			isActive: true,
+		}
+	},
+}
 </script>
 
 <template>
 	<div class="app-container">
 		<header class="title">CSS Animations</header>
-		<div class="animation-container">
+		<div class="animation-1" :class="{ active: isActive }">
 			<div class="box"></div>
 		</div>
 		<div class="btn-options">
-			<button class="btn-primary">next</button>
+			<button @click="isActive = !isActive" class="btn-primary">next</button>
 		</div>
 	</div>
 </template>
@@ -30,8 +35,8 @@
 	color: white;
 	padding-bottom: 4rem;
 }
-.animation-container {
-	display: flex;
+.animation-1 {
+	display: none;
 	padding-left: 38%;
 	height: 600px;
 }
@@ -40,7 +45,7 @@
 	height: 100px;
 	background-color: red;
 	position: relative;
-	animation: square 4s linear 2s infinite alternate-reverse backwards running;
+	animation: square 4s linear 0s infinite alternate backwards running;
 }
 .btn-options {
 	margin-top: 3rem;
@@ -90,6 +95,9 @@
 		top: 0px;
 		border-radius: 0px;
 	}
+}
+.active {
+	display: flex !important;
 }
 </style>
 
