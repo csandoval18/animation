@@ -1,4 +1,5 @@
 <script lang="ts">
+let index = 0
 export default {
 	data() {
 		return {
@@ -14,8 +15,15 @@ export default {
 		<div class="animation-1" :class="{ active: isActive }">
 			<div class="box"></div>
 		</div>
+		<div class="animation-2" :class="{ active: !isActive }">
+			<div id="circle">
+				<div id="square"></div>
+			</div>
+		</div>
 		<div class="btn-options">
-			<button @click="isActive = !isActive" class="btn-primary">next</button>
+			<button @click="isActive = !isActive" class="btn-primary">
+				toggle animation
+			</button>
 		</div>
 	</div>
 </template>
@@ -40,6 +48,10 @@ export default {
 	padding-left: 38%;
 	height: 600px;
 }
+.animation-2 {
+	display: none;
+	height: 600px;
+}
 .box {
 	width: 100px;
 	height: 100px;
@@ -56,8 +68,7 @@ export default {
 	min-height: 5rem;
 }
 .btn-primary {
-	width: 6rem;
-	height: 3rem;
+	padding: 1rem;
 }
 /* animation-name: square;
 	animation-duration: 2s;
@@ -98,6 +109,71 @@ export default {
 }
 .active {
 	display: flex !important;
+}
+div#circle {
+	width: 200px;
+	height: 200px;
+	border: 15px solid red;
+	margin: 0 auto;
+	margin-top: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	animation: circle 2s linear 0s infinite forwards;
+	/* animation: square 4s linear 0s infinite alternate backwards running; */
+}
+
+@keyframes circle {
+	0% {
+		border-color: red;
+		transform: scale(1);
+	}
+	25% {
+		border-color: gold;
+		transform: scale(1.1);
+	}
+	50% {
+		border-color: lime;
+		transform: scale(1.3);
+	}
+	75% {
+		border-color: dodgerblue;
+		transform: scale(1.1);
+	}
+	100% {
+		border-color: purple;
+		transform: scale(1);
+	}
+}
+
+div#square {
+	width: 75px;
+	height: 75px;
+	border: 5px solid limegreen;
+	animation: square2 2s infinite ease-in-out alternate-reverse;
+}
+
+@keyframes square2 {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		border-color: aquamarine;
+		border-width: 10px;
+	}
+	50% {
+		border-color: coral;
+		border-width: 20px;
+	}
+	75% {
+		border-color: deeppink;
+		border-width: 40px;
+	}
+	100% {
+		transform: rotate(360deg);
+		border-width: 5px;
+	}
 }
 </style>
 
