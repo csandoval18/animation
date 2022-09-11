@@ -43,7 +43,7 @@ export default {
 	color: white;
 	padding-bottom: 4rem;
 	left: -100vw;
-	animation: title 2s ease-in-out normal;
+	animation: title 1s ease-in-out normal;
 }
 @keyframes title {
 	0% {
