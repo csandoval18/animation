@@ -42,14 +42,13 @@ export default {
 	font-size: 3rem;
 	color: white;
 	padding-bottom: 4rem;
-	animation-name: title;
-	animation-duration: 2s;
-	animation-timing-function: linear;
-	animation-delay: 2s;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-	animation-fill-mode: backwards;
-	animation-play-state: running;
+	left: -100vw;
+	animation: title 2s ease-in-out normal;
+}
+@keyframes title {
+	0% {
+		transform: translateX(-100vw);
+	}
 }
 .animation-1 {
 	display: none;
