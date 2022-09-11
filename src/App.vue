@@ -88,28 +88,28 @@ export default {
 	animation-play-state: running; */
 @keyframes square {
 	0% {
-		background-color: red;
+		background-color: cornflowerblue;
 		left: 0;
 		top: 0;
 	}
 	25% {
-		background-color: gold;
+		background-color: coral;
 		left: 30%;
 		top: 0px;
 	}
 	50% {
-		background-color: lime;
+		background-color: cornflowerblue;
 		left: 30%;
 		top: 500px;
 		border-radius: 50%;
 	}
 	70% {
-		background-color: dodgerblue;
+		background-color: aquamarine;
 		left: 0px;
 		top: 500px;
 	}
 	100% {
-		background-color: purple;
+		background-color: darkorange;
 		left: 0px;
 		top: 0px;
 		border-radius: 0px;
@@ -121,36 +121,36 @@ export default {
 div#circle {
 	width: 200px;
 	height: 200px;
-	border: 15px solid red;
+	border: 15px solid cornflowerblue;
 	margin: 0 auto;
 	margin-top: 10%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	animation: circle 2s linear 0s infinite forwards;
+	animation: circle 2.5s linear 0s infinite forwards;
 	/* animation: square 4s linear 0s infinite alternate backwards running; */
 }
 
 @keyframes circle {
 	0% {
-		border-color: red;
+		border-color: darkseagreen;
 		transform: scale(1);
 	}
 	25% {
-		border-color: gold;
+		border-color: coral;
 		transform: scale(1.1);
 	}
 	50% {
-		border-color: lime;
+		border-color: cornflowerblue;
 		transform: scale(1.3);
 	}
 	75% {
-		border-color: dodgerblue;
+		border-color: deeppink;
 		transform: scale(1.1);
 	}
 	100% {
-		border-color: purple;
+		border-color: greenyellow;
 		transform: scale(1);
 	}
 }
@@ -158,20 +158,21 @@ div#circle {
 div#square {
 	width: 75px;
 	height: 75px;
-	border: 5px solid limegreen;
-	animation: square2 2s infinite ease-in-out alternate-reverse;
+	border: 5px solid cornflowerblue;
+	animation: square2 2.5s infinite ease-in-out normal;
 }
 
 @keyframes square2 {
 	0% {
+		border-color: darkseagreen;
 		transform: rotate(0deg);
 	}
 	25% {
-		border-color: aquamarine;
+		border-color: coral;
 		border-width: 10px;
 	}
 	50% {
-		border-color: coral;
+		border-color: cornflowerblue;
 		border-width: 20px;
 	}
 	75% {
@@ -179,6 +180,7 @@ div#square {
 		border-width: 40px;
 	}
 	100% {
+		border-color: greenyellow;
 		transform: rotate(360deg);
 		border-width: 5px;
 	}
